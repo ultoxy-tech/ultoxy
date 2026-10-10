@@ -655,7 +655,7 @@ export default function About() {
             </div>
             <h2 className="abt-section-headline">
               Uncompromising Standards.{' '}
-              <span className="abt-headline-gradient">Multicolor Innovation.</span>
+              <span className="abt-headline-gradient">Relentless Innovation.</span>
             </h2>
             <p className="abt-section-subtitle">
               Every system we engineer adheres to four foundational commitments that
