@@ -1,0 +1,535 @@
+/* ===================================================================
+   ULTOXY TECHNOLOGIES — Next-Level Executive Footer (Footer.css)
+   Features:
+   - Multi-Layered Harmonic Animated SVG Wave Crest
+   - Soft Drifting Blurry Aurora Gradient Shapes (Non-Jarring, Executive)
+   - Subtle Flowing Sine-Wave Background Ribbons & Architectural Grid
+   - Dual-Theme Support (Default Pure White + Midnight Dark)
+   - 5-Tier Fluid Responsiveness
+   =================================================================== */
+
+@keyframes footerOrbFloatA {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(45px, -25px, 0) scale(1.08);
+  }
+  100% {
+    transform: translate3d(-25px, 20px, 0) scale(0.95);
+  }
+}
+
+@keyframes footerOrbFloatB {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-50px, 30px, 0) scale(1.1);
+  }
+  100% {
+    transform: translate3d(30px, -20px, 0) scale(0.94);
+  }
+}
+
+.ultoxy-footer {
+  position: relative;
+  background: var(--bg-secondary);
+  padding: clamp(3.5rem, 5.2vw, 4.75rem) 0 1.65rem;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* ---------- 1. Multi-Layered Animated Wave Crest ---------- */
+.footer-wave-crest {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 62px;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+  pointer-events: none;
+  transform: translateY(-1px);
+}
+
+.footer-wave-svg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------- 2. Ambient Blurry Shapes & Wave Lines ---------- */
+.footer-ambient-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.footer-blur-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(110px);
+  will-change: transform;
+}
+
+.footer-orb-cyan {
+  width: 400px;
+  height: 400px;
+  top: 4%;
+  left: -120px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 198, 255, 0.15) 0%,
+    rgba(37, 99, 235, 0.08) 55%,
+    transparent 75%
+  );
+  animation: footerOrbFloatA 18s ease-in-out infinite alternate;
+}
+
+.footer-orb-violet {
+  width: 420px;
+  height: 420px;
+  top: 12%;
+  right: -130px;
+  background: radial-gradient(
+    circle,
+    rgba(124, 58, 237, 0.15) 0%,
+    rgba(236, 72, 153, 0.08) 55%,
+    transparent 75%
+  );
+  animation: footerOrbFloatB 22s ease-in-out infinite alternate;
+}
+
+.footer-orb-rose {
+  width: 340px;
+  height: 340px;
+  bottom: -120px;
+  left: 38%;
+  background: radial-gradient(
+    circle,
+    rgba(236, 72, 153, 0.11) 0%,
+    rgba(245, 158, 11, 0.06) 55%,
+    transparent 75%
+  );
+  animation: footerOrbFloatA 20s ease-in-out infinite alternate-reverse;
+}
+
+[data-theme='dark'] .footer-orb-cyan {
+  background: radial-gradient(
+    circle,
+    rgba(0, 225, 255, 0.18) 0%,
+    rgba(59, 130, 246, 0.1) 55%,
+    transparent 75%
+  );
+}
+
+[data-theme='dark'] .footer-orb-violet {
+  background: radial-gradient(
+    circle,
+    rgba(139, 92, 255, 0.2) 0%,
+    rgba(255, 46, 147, 0.1) 55%,
+    transparent 75%
+  );
+}
+
+.footer-mesh-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    rgba(124, 58, 237, 0.1) 1px,
+    transparent 1px
+  );
+  background-size: 28px 28px;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.5) 35%,
+    rgba(0, 0, 0, 0.5) 80%,
+    transparent 100%
+  );
+  opacity: 0.4;
+}
+
+.footer-bg-wave-lines {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10%;
+  width: 100%;
+  height: 220px;
+  pointer-events: none;
+}
+
+.footer-inner-container {
+  position: relative;
+  z-index: 3;
+}
+
+/* ---------- 3. Main 4-Column Executive Grid ---------- */
+.footer-main-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.75fr 0.95fr 1.15fr;
+  gap: 2.5rem;
+  padding-bottom: 2.15rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Column 1: Brand Identity */
+.footer-logo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.95rem;
+}
+
+.footer-logo-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  box-shadow: var(--shadow-sm);
+}
+
+.footer-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.footer-brand-titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-brand-name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1.05;
+}
+
+.footer-brand-sub {
+  font-family: var(--font-mono);
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--brand-violet);
+}
+
+.footer-brand-desc {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+  max-width: 340px;
+}
+
+.footer-socials-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-social-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.footer-social-btn:hover {
+  background: var(--gradient-brand);
+  color: #ffffff;
+  border-color: transparent;
+  transform: translateY(-2px);
+}
+
+/* Columns 2 & 3: Links & Services */
+.footer-col-heading {
+  position: relative;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.1rem;
+  padding-bottom: 0.5rem;
+}
+
+.footer-col-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 32px;
+  height: 3px;
+  border-radius: var(--radius-full);
+  background: var(--gradient-brand);
+}
+
+.footer-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition:
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.footer-nav-link:hover {
+  color: var(--brand-violet);
+  transform: translateX(3px);
+}
+
+.footer-link-chevron {
+  color: var(--brand-primary);
+  opacity: 0.75;
+}
+
+.footer-srv-icon-box {
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  background: var(--icon-bg);
+  color: var(--icon-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.footer-service-link:hover .footer-srv-icon-box {
+  background: var(--gradient-brand);
+  color: #ffffff;
+}
+
+/* Column 4: Clean Executive Contact List */
+.footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.footer-contact-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  color: var(--text-secondary);
+}
+
+.footer-contact-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  color: var(--icon-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.footer-contact-row:hover .footer-contact-icon {
+  background: var(--gradient-brand);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.footer-contact-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+  padding-top: 0.18rem;
+}
+
+.footer-contact-link {
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.35;
+  transition: color var(--transition-fast);
+}
+
+.footer-contact-link:hover {
+  color: var(--brand-violet);
+}
+
+.footer-contact-sublink {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  line-height: 1.35;
+  transition: color var(--transition-fast);
+}
+
+.footer-contact-sublink:hover {
+  color: var(--brand-violet);
+}
+
+/* ---------- 4. Minimal Bottom Bar ---------- */
+.footer-bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1.35rem;
+}
+
+.footer-copyright {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+}
+
+.footer-bottom-right {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.footer-bottom-tagline {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.footer-scroll-top-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.footer-scroll-top-btn:hover {
+  background: var(--gradient-brand);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ---------- 5. Floating Scroll-to-Top Button ---------- */
+.ultoxy-floating-top-btn {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
+  background: var(--gradient-multicolor-flow);
+  background-size: 250% 250%;
+  animation: gradientAuroraFlow 7s ease infinite;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 28px -6px rgba(124, 58, 237, 0.55);
+  z-index: 990;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px) scale(0.9);
+  transition:
+    opacity var(--transition-base),
+    transform var(--transition-base);
+}
+
+.ultoxy-floating-top-btn.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.ultoxy-floating-top-btn:hover {
+  transform: translateY(-4px) scale(1.04);
+}
+
+/* ---------- 6. Responsive Breakpoints ---------- */
+@media (max-width: 1100px) {
+  .footer-main-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-wave-crest {
+    height: 42px;
+  }
+
+  .footer-main-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .footer-brand-desc {
+    max-width: 100%;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-bottom-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .ultoxy-floating-top-btn {
+    right: 16px;
+    bottom: 16px;
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -1,0 +1,158 @@
+/* ===================================================================
+   Phase 1 — Navigation & Dual-Theme Architecture Preview Canvas
+   Fluidly Responsive across Desktop, Laptop, Tablet & Mobile
+   =================================================================== */
+
+.placeholder-page {
+  min-height: 155vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: clamp(3rem, 7vw, 5.5rem) var(--container-padding) 6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.placeholder-page::before {
+  content: '';
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(860px, 96vw);
+  height: 440px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(37, 99, 235, 0.08) 0%,
+    rgba(2, 132, 199, 0.04) 45%,
+    transparent 75%
+  );
+  pointer-events: none;
+}
+
+.placeholder-page__content {
+  text-align: center;
+  width: 100%;
+  max-width: 1080px;
+  position: relative;
+  z-index: 1;
+}
+
+.placeholder-page__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  font-family: var(--font-mono);
+  font-size: clamp(0.65rem, 1.5vw, 0.72rem);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-badge);
+  background: var(--bg-badge);
+  border: 1px solid var(--icon-border);
+  border-radius: var(--radius-full);
+  margin-bottom: 1.35rem;
+  max-width: 100%;
+}
+
+.placeholder-page__title {
+  font-size: clamp(1.9rem, 4.5vw, 3.45rem);
+  font-weight: 700;
+  line-height: 1.12;
+  margin-bottom: 1.1rem;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+}
+
+.placeholder-page__text {
+  font-size: clamp(0.95rem, 2vw, 1.06rem);
+  line-height: 1.7;
+  color: var(--text-secondary);
+  max-width: 640px;
+  margin: 0 auto 2.5rem;
+}
+
+.placeholder-page__interactive-guide {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  width: 100%;
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+.placeholder-page__guide-card {
+  padding: 1.3rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition:
+    border-color var(--transition-base),
+    box-shadow var(--transition-base),
+    background var(--transition-base);
+}
+
+.placeholder-page__guide-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-brand-strong);
+  box-shadow: var(--shadow-md);
+}
+
+.placeholder-page__guide-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--icon-bg);
+  border: 1px solid var(--icon-border);
+  color: var(--icon-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.85rem;
+  flex-shrink: 0;
+}
+
+.placeholder-page__guide-step {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 700;
+  color: var(--brand-primary);
+  margin-bottom: 0.25rem;
+}
+
+.placeholder-page__guide-title {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.placeholder-page__guide-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.52;
+}
+
+@media (max-width: 1024px) {
+  .placeholder-page__interactive-guide {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .placeholder-page__interactive-guide {
+    grid-template-columns: 1fr;
+  }
+
+  .placeholder-page__guide-card {
+    padding: 1.1rem;
+  }
+}
