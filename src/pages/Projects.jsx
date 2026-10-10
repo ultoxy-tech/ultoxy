@@ -22,6 +22,10 @@ import {
   Zap,
   ChevronLeft,
   ChevronRight,
+  Code2,
+  Gauge,
+  ShieldCheck,
+  Activity,
 } from 'lucide-react'
 import SEO from '../components/SEO'
 import { seoConfig, portfolioProjects, companyInfo } from '../data/companyData'
@@ -178,8 +182,13 @@ const RIGHT_CARD_3D_VARIANTS = {
   }),
 }
 
+const resolveAsset = (p) =>
+  p && !p.startsWith('http') && !p.startsWith('data:')
+    ? `${import.meta.env.BASE_URL || '/'}${p.replace(/^\//, '')}`
+    : p
+
 // 4 Signature Exhibition Tracks for the 3D Constellation
-const EXHIBITION_TRACKS = [
+const RAW_EXHIBITION_TRACKS = [
   {
     id: 'track-real-estate',
     code: '01',
@@ -314,6 +323,13 @@ const EXHIBITION_TRACKS = [
   },
 ]
 
+const EXHIBITION_TRACKS = RAW_EXHIBITION_TRACKS.map((t) => ({
+  ...t,
+  center: { ...t.center, image: resolveAsset(t.center.image) },
+  left: { ...t.left, image: resolveAsset(t.left.image) },
+  right: { ...t.right, image: resolveAsset(t.right.image) },
+}))
+
 // UltraCoachMatrix Core Modules Breakdown
 const ULTRACOACH_MODULES = [
   {
@@ -383,7 +399,7 @@ const ULTRACOACH_MODULES = [
 ]
 
 // Industry Vertical Matrix Tabs
-const INDUSTRY_VERTICALS = [
+const RAW_INDUSTRY_VERTICALS = [
   {
     id: 'real-estate',
     name: 'Real Estate & Land',
@@ -522,27 +538,75 @@ const INDUSTRY_VERTICALS = [
   },
 ]
 
-// Technical Rigor Pillars
+const INDUSTRY_VERTICALS = RAW_INDUSTRY_VERTICALS.map((cat) => ({
+  ...cat,
+  projects: cat.projects.map((p) => ({
+    ...p,
+    image: resolveAsset(p.image),
+  })),
+}))
+
+// Technical Rigor Pillars (Multicolor 4 Architecture Systems)
 const RIGOR_STANDARDS = [
   {
     num: '01',
+    theme: 'mint',
+    accentColor: '#00ffc6',
+    icon: Code2,
+    badge: '100% IP HANDOVER',
+    metric: 'ZERO VENDOR LOCK-IN',
     title: 'Clean Source Code',
-    desc: 'Modular, well-documented architecture with zero vendor lock-in and complete intellectual property handover.',
+    desc: 'Modular, self-documenting codebases built with modern component architectures and strict linting for effortless enterprise maintenance.',
+    highlights: [
+      'Strict ESLint & Oxlint Code Standards',
+      'Modular Reusable Component Hierarchy',
+      'Complete Git Repository Handover',
+    ],
   },
   {
     num: '02',
+    theme: 'blue',
+    accentColor: '#006cff',
+    icon: Gauge,
+    badge: '99/100 CORE WEB VITALS',
+    metric: '< 0.8s FIRST CONTENTFUL PAINT',
     title: 'Sub-Second Velocity',
-    desc: 'Targeting 99/100 Google Core Web Vitals with GPU acceleration, dynamic asset bundling, and instant responsiveness.',
+    desc: 'Engineered for instant responsiveness with GPU hardware acceleration, dynamic code-splitting, tree-shaking, and global CDN delivery.',
+    highlights: [
+      '60FPS Silky UI & Layout Transitions',
+      'Dynamic WebP/AVIF Asset Optimization',
+      'Sub-Second First Contentful Paint',
+    ],
   },
   {
     num: '03',
+    theme: 'purple',
+    accentColor: '#8b5cf6',
+    icon: ShieldCheck,
+    badge: 'BANK-GRADE TLS 1.3',
+    metric: 'OWASP TOP 10 SANITIZED',
     title: 'Enterprise Security',
-    desc: 'Role-based access control (RBAC), TLS 1.3 encryption, sanitized SQL queries, and automated cloud backups.',
+    desc: 'Rigorous multi-layer defense with role-based access control, cryptographic key protection, sanitized SQL inputs, and automated cloud snapshots.',
+    highlights: [
+      'Granular Role-Based Access Control',
+      'Automated Multi-Zone Cloud Backups',
+      'Strict OWASP Top 10 Sanitization',
+    ],
   },
   {
     num: '04',
+    theme: 'pink',
+    accentColor: '#ff6ec7',
+    icon: Activity,
+    badge: '99.98% UPTIME SLA',
+    metric: '24/7 PROACTIVE RADAR',
     title: 'Post-Deploy Care',
-    desc: 'Dedicated technical support, ongoing performance audits, and rapid agile sprint feature extensions.',
+    desc: 'Dedicated technical engineers providing real-time production telemetry, continuous security patches, and agile monthly sprint extensions.',
+    highlights: [
+      'Real-Time Error Telemetry & Alerts',
+      'Scheduled Security & Performance Audits',
+      'Agile Rapid-Response Feature Sprints',
+    ],
   },
 ]
 
@@ -1137,7 +1201,7 @@ export default function Projects() {
                 <div className="prj-holo-topline">
                   <div className="prj-holo-brand">
                     <img
-                      src="/projects/ultracoachmatrix-logo.png"
+                      src={resolveAsset('projects/ultracoachmatrix-logo.png')}
                       alt="Ultra Coach Matrix"
                       className="prj-holo-logo"
                     />
@@ -1440,18 +1504,114 @@ export default function Projects() {
       </section>
 
       {/* ===================================================================
-          SECTION 4: TECHNICAL RIGOR & PRODUCTION STANDARDS
+          SECTION 4: TECHNICAL RIGOR & PRODUCTION STANDARDS (MULTICOLOR 3D CARDS)
           =================================================================== */}
-      <section className="prj-standards-section">
-        <div className="container">
-          <div className="prj-standards-grid">
-            {RIGOR_STANDARDS.map((std) => (
-              <div key={std.num} className="prj-standard-box">
-                <span className="prj-standard-num">PILLAR {std.num}</span>
-                <h3 className="prj-standard-title">{std.title}</h3>
-                <p className="prj-standard-desc">{std.desc}</p>
+      <section className="prj-standards-section" id="engineering-rigor">
+        {/* Subtle ambient light glows */}
+        <div className="prj-standards-ambient-bg" aria-hidden="true">
+          <div className="prj-standards-orb prj-orb-mint" />
+          <div className="prj-standards-orb prj-orb-blue" />
+          <div className="prj-standards-orb prj-orb-purple" />
+          <div className="prj-standards-orb prj-orb-pink" />
+        </div>
+
+        <div className="container prj-standards-container">
+          {/* Editorial Section Header */}
+          <motion.div
+            className="prj-standards-header"
+            initial={{ opacity: 0, y: 22 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.65, ease: EASE_OUT_EXPO }}
+          >
+            <div className="prj-eyebrow-row">
+              <div className="prj-eyebrow-pill">
+                <span className="prj-beacon-dot" />
+                <span>ENGINEERING RIGOR & PRODUCTION INTEGRITY</span>
+                <span className="prj-eyebrow-sep">/</span>
+                <span className="prj-eyebrow-meta">UNCOMPROMISING CRAFT</span>
               </div>
-            ))}
+            </div>
+            <h2 className="prj-standards-headline">
+              The 4 Pillars of Our{' '}
+              <span className="prj-standards-gradient">Digital Architecture</span>
+            </h2>
+            <p className="prj-standards-subtitle">
+              Every website, ERP ecosystem, and digital product is engineered
+              against strict enterprise benchmarks — from verifiable IP ownership to sub-second load velocity.
+            </p>
+          </motion.div>
+
+          {/* 4 Multicolor Animated Interactive Cards */}
+          <div className="prj-standards-grid">
+            {RIGOR_STANDARDS.map((std, idx) => {
+              const IconComp = std.icon
+              return (
+                <motion.div
+                  key={std.num}
+                  className={`prj-pillar-card prj-pillar-${std.theme}`}
+                  initial={{ opacity: 0, y: 32, scale: 0.96 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true, amount: 0.15 }}
+                  transition={{
+                    duration: 0.65,
+                    delay: idx * 0.1,
+                    ease: EASE_OUT_EXPO,
+                  }}
+                  whileHover={{
+                    y: -8,
+                    scale: 1.02,
+                    transition: { duration: 0.32, ease: EASE_OUT_EXPO },
+                  }}
+                >
+                  {/* Glowing Top Laser Flow Bar */}
+                  <div className="prj-pillar-laser-beam" />
+
+                  {/* Header: Icon Pedestal + Status Badge */}
+                  <div className="prj-pillar-top-row">
+                    <div className="prj-pillar-icon-pedestal">
+                      <IconComp size={22} className="prj-pillar-icon" />
+                      <span className="prj-pillar-icon-aura" />
+                    </div>
+                    <div className="prj-pillar-badges">
+                      <span className="prj-pillar-badge-num">
+                        PILLAR {std.num}
+                      </span>
+                      <span className="prj-pillar-pulse-dot" />
+                    </div>
+                  </div>
+
+                  {/* Heading & Benchmark Chip */}
+                  <div className="prj-pillar-heading-block">
+                    <span className="prj-pillar-metric-tag">{std.badge}</span>
+                    <h3 className="prj-pillar-title">{std.title}</h3>
+                  </div>
+
+                  {/* Description */}
+                  <p className="prj-pillar-desc">{std.desc}</p>
+
+                  {/* Verified Checklist */}
+                  <div className="prj-pillar-features">
+                    {std.highlights.map((item) => (
+                      <div key={item} className="prj-pillar-feature-item">
+                        <CheckCircle2 size={13} className="prj-pillar-check-icon" />
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Bottom Telemetry Bar */}
+                  <div className="prj-pillar-bottom-bar">
+                    <span className="prj-pillar-telemetry-label">
+                      VERIFIED SPEC
+                    </span>
+                    <span className="prj-pillar-telemetry-val">
+                      {std.metric}
+                    </span>
+                  </div>
+                </motion.div>
+              )
+            })}
           </div>
         </div>
       </section>

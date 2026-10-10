@@ -232,7 +232,7 @@ export const serviceCategories = [
   },
 ]
 
-export const portfolioProjects = [
+const rawPortfolioProjects = [
   {
     id: 1,
     title: 'Sai Land Developers',
@@ -377,6 +377,14 @@ export const portfolioProjects = [
     tags: ['Equipment Catalog', 'Industrial B2B', 'Corporate Web'],
   },
 ]
+
+export const portfolioProjects = rawPortfolioProjects.map((p) => ({
+  ...p,
+  image:
+    p.image && !p.image.startsWith('http') && !p.image.startsWith('data:')
+      ? `${import.meta.env.BASE_URL || '/'}${p.image.replace(/^\//, '')}`
+      : p.image,
+}))
 
 export const featuredProjectsQuickList = portfolioProjects.slice(0, 6).map((p) => ({
   name: p.title,

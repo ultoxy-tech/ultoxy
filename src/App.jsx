@@ -12,7 +12,7 @@ import Contact from './pages/Contact'
 function App() {
   return (
     <ThemeProvider>
-      <Router>
+      <Router basename={import.meta.env.BASE_URL}>
         <Navbar />
         <main>
           <Routes>
