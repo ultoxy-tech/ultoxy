@@ -1,0 +1,1770 @@
+/* ===================================================================
+   ULTOXY TECHNOLOGIES — NEXT-GEN ABOUT PAGE STYLES (WHITE THEME)
+   =================================================================== */
+
+.ultoxy-about-page {
+  position: relative;
+  background-color: #ffffff;
+  color: #101828;
+  overflow-x: hidden;
+  font-family: var(--font-sans, 'DM Sans', -apple-system, sans-serif);
+}
+
+/* ===================================================================
+   HERO SECTION: DIGITAL MANIFESTO & SPATIAL STAGE
+   =================================================================== */
+.abt-hero-section {
+  position: relative;
+  padding: clamp(3.5rem, 6vw, 5.5rem) 0 clamp(4rem, 6.5vw, 6rem);
+  background-color: #ffffff;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Atmospheric Ambient Colored Light Orbs */
+.abt-hero-ambient-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.abt-dot-matrix {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(148, 163, 184, 0.22) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(ellipse 85% 70% at 50% 30%, #000 35%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 85% 70% at 50% 30%, #000 35%, transparent 100%);
+  opacity: 0.65;
+}
+
+.abt-ambient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+.abt-orb-mint {
+  width: 480px;
+  height: 480px;
+  top: -120px;
+  left: 8%;
+  background: radial-gradient(circle, rgba(0, 255, 198, 0.16) 0%, transparent 70%);
+  animation: ambientOrbPulse 14s ease-in-out infinite alternate;
+}
+
+.abt-orb-blue {
+  width: 520px;
+  height: 520px;
+  top: 15%;
+  right: 6%;
+  background: radial-gradient(circle, rgba(0, 108, 255, 0.13) 0%, transparent 70%);
+  animation: ambientOrbPulse 18s ease-in-out infinite alternate-reverse;
+}
+
+.abt-orb-purple {
+  width: 440px;
+  height: 440px;
+  bottom: 5%;
+  left: 35%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.12) 0%, transparent 70%);
+  animation: ambientOrbPulse 16s ease-in-out infinite alternate;
+}
+
+.abt-orb-pink {
+  width: 400px;
+  height: 400px;
+  bottom: -60px;
+  right: 12%;
+  background: radial-gradient(circle, rgba(255, 110, 199, 0.12) 0%, transparent 70%);
+  animation: ambientOrbPulse 15s ease-in-out infinite alternate-reverse;
+}
+
+.abt-hero-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Eyebrow Pill */
+.abt-eyebrow-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.abt-eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.42rem 1.15rem;
+  border-radius: 9999px;
+  background-color: #f7f9fc;
+  border: 1px solid #e7ebf2;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #334155;
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.03);
+}
+
+.abt-beacon-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #00ffc6;
+  box-shadow: 0 0 10px #00ffc6;
+  animation: beaconGlow 2.5s infinite;
+}
+
+.abt-eyebrow-sep {
+  opacity: 0.35;
+}
+
+.abt-eyebrow-meta {
+  color: #006cff;
+  font-weight: 700;
+}
+
+/* Monumental Editorial Headline */
+.abt-headline-group {
+  text-align: center;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.abt-headline {
+  font-family: var(--font-display, sans-serif);
+  font-size: clamp(2.3rem, 5.5vw, 4.4rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: #101828;
+  margin-bottom: 1.15rem;
+}
+
+.abt-headline-gradient {
+  background: linear-gradient(115deg, #00b4d8 0%, #006cff 38%, #8b5cf6 72%, #ec4899 100%);
+  background-size: 220% 220%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientAuroraFlow 8s ease infinite;
+}
+
+.abt-subtitle {
+  font-size: clamp(1rem, 1.35vw, 1.2rem);
+  font-weight: 400;
+  line-height: 1.65;
+  color: #64748b;
+  max-width: 760px;
+  margin: 0 auto 2rem;
+}
+
+/* Hero CTA Row */
+.abt-cta-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: clamp(2.8rem, 5vw, 4rem);
+}
+
+.abt-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.88rem 1.85rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #101828 0%, #1e293b 100%);
+  color: #ffffff;
+  font-family: var(--font-display, sans-serif);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  box-shadow: 0 12px 28px -6px rgba(16, 24, 40, 0.22);
+  transition: transform 380ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 380ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.abt-btn-primary:hover {
+  transform: translateY(-2px);
+  color: #ffffff;
+  box-shadow: 0 18px 36px -8px rgba(16, 24, 40, 0.32);
+}
+
+.abt-btn-primary svg {
+  color: #00ffc6;
+  transition: transform 300ms ease;
+}
+
+.abt-btn-primary:hover svg {
+  transform: translate(2px, -2px);
+}
+
+.abt-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.85rem 1.65rem;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  border: 1px solid #e7ebf2;
+  color: #334155;
+  font-family: var(--font-display, sans-serif);
+  font-size: 0.9rem;
+  font-weight: 700;
+  box-shadow: 0 2px 10px rgba(16, 24, 40, 0.04);
+  transition: border-color 340ms ease, background-color 340ms ease, transform 340ms ease;
+}
+
+.abt-btn-secondary:hover {
+  border-color: #006cff;
+  color: #006cff;
+  background-color: #f8fafc;
+  transform: translateY(-2px);
+}
+
+.abt-btn-secondary svg {
+  transition: transform 300ms ease;
+}
+
+.abt-btn-secondary:hover svg {
+  transform: translateX(3px);
+}
+
+/* ===================================================================
+   QUICK METRICS RIBBON
+   =================================================================== */
+.abt-metrics-ribbon {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  align-items: center;
+  max-width: 1040px;
+  margin: 0 auto clamp(2.5rem, 4.5vw, 3.8rem);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid #e7ebf2;
+  border-radius: 20px;
+  padding: 1.25rem 2rem;
+  box-shadow: 0 10px 30px -8px rgba(16, 24, 40, 0.06);
+}
+
+.abt-metric-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.25rem;
+}
+
+.abt-metric-number {
+  font-family: var(--font-display, sans-serif);
+  font-size: clamp(1.6rem, 2.5vw, 2.25rem);
+  font-weight: 800;
+  color: #101828;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.abt-metric-caption {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #64748b;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.abt-metric-divider {
+  width: 1px;
+  height: 38px;
+  background-color: #e7ebf2;
+}
+
+/* ===================================================================
+   SIGNATURE 3D SPATIAL HOLOGRAPHIC CONSOLE
+   =================================================================== */
+.abt-spatial-stage {
+  position: relative;
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  perspective: 1400px;
+}
+
+.abt-console-hud {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.45rem 1.15rem;
+  margin-bottom: 0.85rem;
+  background: rgba(247, 249, 252, 0.88);
+  backdrop-filter: blur(12px);
+  border: 1px solid #e7ebf2;
+  border-radius: 9999px;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #64748b;
+}
+
+.abt-hud-pulse {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #00ffc6;
+  box-shadow: 0 0 8px #00ffc6;
+  margin-right: 6px;
+  animation: beaconGlow 2s infinite;
+}
+
+.abt-console-card {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #e7ebf2;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow:
+    0 24px 60px -12px rgba(16, 24, 40, 0.12),
+    0 2px 6px rgba(16, 24, 40, 0.03);
+  transform-style: preserve-3d;
+  transition: transform 340ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 340ms ease;
+  text-align: left;
+}
+
+.abt-console-card:hover {
+  box-shadow:
+    0 32px 75px -14px rgba(16, 24, 40, 0.16),
+    0 0 0 1px rgba(0, 108, 255, 0.2);
+}
+
+.abt-window-chrome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.2rem;
+  background-color: #f8fafc;
+  border-bottom: 1px solid #e7ebf2;
+}
+
+.abt-chrome-dots {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.abt-chrome-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.abt-chrome-dot.dot-red { background-color: #f43f5e; }
+.abt-chrome-dot.dot-yellow { background-color: #f59e0b; }
+.abt-chrome-dot.dot-green { background-color: #10b981; }
+
+.abt-chrome-address-bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.85rem;
+  border-radius: 6px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.72rem;
+  color: #475569;
+}
+
+.abt-chrome-address-bar svg {
+  color: #00ffc6;
+}
+
+.abt-chrome-tag {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #006cff;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.55rem;
+  border-radius: 9999px;
+  background: rgba(0, 108, 255, 0.08);
+}
+
+/* Console Media Container */
+.abt-console-media-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #0f172a;
+  overflow: hidden;
+}
+
+.abt-console-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.abt-console-glass-sheen {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.abt-console-scanline {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(0, 255, 198, 0.2) 48%,
+    rgba(0, 108, 255, 0.25) 52%,
+    transparent 100%
+  );
+  background-size: 100% 200%;
+  pointer-events: none;
+  opacity: 0.75;
+  animation: scanlineSweep 4s linear infinite;
+}
+
+.abt-console-floating-tag {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.95rem;
+  border-radius: 9999px;
+  background: rgba(16, 24, 40, 0.75);
+  backdrop-filter: blur(12px);
+  color: #ffffff;
+  font-family: var(--font-display, sans-serif);
+  font-size: 0.78rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Console Bottom Dossier */
+.abt-console-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.15rem 1.45rem;
+  background-color: #ffffff;
+  border-top: 1px solid #e7ebf2;
+}
+
+.abt-footer-kicker {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #006cff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.abt-footer-title {
+  font-family: var(--font-display, sans-serif);
+  font-size: 1.08rem;
+  font-weight: 800;
+  color: #101828;
+  margin: 0;
+}
+
+.abt-console-footer-chips {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.abt-chip-pill {
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  background-color: #f1f5f9;
+  color: #475569;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.68rem;
+  font-weight: 600;
+}
+
+/* Orbiting Badges */
+.abt-orbit-badge {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  border: 1px solid #e7ebf2;
+  box-shadow: 0 10px 24px -4px rgba(16, 24, 40, 0.12);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #101828;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.badge-top-left {
+  top: 12%;
+  left: -28px;
+}
+
+.badge-top-right {
+  top: 18%;
+  right: -28px;
+}
+
+.badge-bottom-left {
+  bottom: 22%;
+  left: -32px;
+}
+
+.badge-bottom-right {
+  bottom: 16%;
+  right: -32px;
+}
+
+/* ===================================================================
+   SECTION 2: ORIGIN & PHILOSOPHY (INTERACTIVE DOSSIER)
+   =================================================================== */
+.abt-philosophy-section {
+  position: relative;
+  padding: clamp(4.5rem, 7vw, 6.5rem) 0;
+  background-color: #f8fafc;
+  border-top: 1px solid #e7ebf2;
+  border-bottom: 1px solid #e7ebf2;
+}
+
+.abt-philosophy-content {
+  text-align: left;
+}
+
+.abt-section-title {
+  font-family: var(--font-display, sans-serif);
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 800;
+  color: #101828;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin-bottom: 1rem;
+}
+
+.abt-title-accent {
+  color: #006cff;
+}
+
+.abt-title-gradient {
+  background: linear-gradient(115deg, #006cff 0%, #8b5cf6 50%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.abt-section-lead {
+  font-size: 1.02rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* 3-Way Tab Switcher */
+.abt-tab-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  border: 1px solid #e7ebf2;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.03);
+}
+
+.abt-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.15rem;
+  border-radius: 9999px;
+  background: transparent;
+  border: none;
+  font-family: var(--font-display, sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 260ms ease;
+}
+
+.abt-tab-btn:hover {
+  color: #101828;
+}
+
+.abt-tab-btn.is-active {
+  background: linear-gradient(135deg, #101828 0%, #1e293b 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(16, 24, 40, 0.22);
+}
+
+.abt-tab-display-card {
+  background-color: #ffffff;
+  border: 1px solid #e7ebf2;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px -6px rgba(16, 24, 40, 0.05);
+}
+
+.abt-tab-headline {
+  font-family: var(--font-display, sans-serif);
+  font-size: 1.22rem;
+  font-weight: 800;
+  color: #101828;
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+}
+
+.abt-tab-desc {
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.abt-tab-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.abt-tab-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #334155;
+  line-height: 1.45;
+}
+
+.abt-check-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.text-mint { color: #059669; }
+.text-blue { color: #006cff; }
+.text-purple { color: #7c3aed; }
+.text-pink { color: #db2777; }
+
+/* Architectural DNA Card */
+.abt-dna-card {
+  background-color: #ffffff;
+  border: 1px solid #e7ebf2;
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 18px 45px -8px rgba(16, 24, 40, 0.08);
+  text-align: left;
+}
+
+.abt-dna-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e7ebf2;
+}
+
+.abt-dna-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(0, 108, 255, 0.1);
+  color: #006cff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.abt-dna-kicker {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #006cff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.abt-dna-title {
+  font-family: var(--font-display, sans-serif);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #101828;
+  margin: 0;
+}
+
+.abt-dna-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.abt-dna-spec-item {
+  background-color: #f8fafc;
+  border: 1px solid #e7ebf2;
+  border-radius: 14px;
+  padding: 0.85rem 1.05rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.abt-spec-label {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.2rem;
+}
+
+.abt-spec-val {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.85rem;
+  font-weight: 800;
+  margin-bottom: 0.15rem;
+}
+
+.abt-spec-sub {
+  font-size: 0.72rem;
+  color: #64748b;
+}
+
+.abt-dna-code-block {
+  background-color: #0f172a;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #1e293b;
+}
+
+.abt-code-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.55rem 0.95rem;
+  background-color: #1e293b;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.68rem;
+  color: #94a3b8;
+}
+
+.abt-code-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #00ffc6;
+  box-shadow: 0 0 6px #00ffc6;
+}
+
+.abt-code-body {
+  margin: 0;
+  padding: 0.85rem 1rem;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.74rem;
+  color: #38bdf8;
+  line-height: 1.5;
+  overflow-x: auto;
+}
+
+/* ===================================================================
+   SECTION 3: 4 FOUNDATIONAL PILLARS (MULTICOLOR 3D TILES)
+   =================================================================== */
+.abt-values-section {
+  position: relative;
+  padding: clamp(4.5rem, 7vw, 6.5rem) 0;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.abt-values-ambient-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.abt-values-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+.abt-values-container {
+  position: relative;
+  z-index: 1;
+}
+
+.abt-values-header {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto clamp(2.5rem, 4.5vw, 3.8rem);
+}
+
+.abt-section-headline {
+  font-family: var(--font-display, sans-serif);
+  font-size: clamp(2.1rem, 4vw, 3.25rem);
+  font-weight: 800;
+  color: #101828;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin: 0.85rem 0 0.95rem;
+}
+
+.abt-section-subtitle {
+  font-size: clamp(0.95rem, 1.25vw, 1.1rem);
+  color: #64748b;
+  line-height: 1.62;
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+.abt-values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(1.2rem, 2vw, 1.75rem);
+}
+
+.abt-value-card {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #e7ebf2;
+  border-radius: 24px;
+  padding: 1.85rem 1.45rem;
+  box-shadow:
+    0 10px 30px -6px rgba(16, 24, 40, 0.05),
+    0 2px 6px rgba(16, 24, 40, 0.02);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: default;
+  transition:
+    border-color 340ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 340ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.abt-card-laser-beam {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  opacity: 0;
+  transition: opacity 340ms ease;
+  pointer-events: none;
+}
+
+.abt-value-card:hover .abt-card-laser-beam {
+  opacity: 1;
+}
+
+.abt-card-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.35rem;
+}
+
+.abt-card-icon-pedestal {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.abt-value-card:hover .abt-card-icon-pedestal {
+  transform: scale(1.08) rotate(-3deg);
+}
+
+.abt-card-icon-aura {
+  position: absolute;
+  inset: -4px;
+  border-radius: 18px;
+  opacity: 0;
+  filter: blur(6px);
+  transition: opacity 320ms ease;
+  pointer-events: none;
+}
+
+.abt-value-card:hover .abt-card-icon-aura {
+  opacity: 0.65;
+}
+
+.abt-card-badges {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.28rem 0.72rem;
+  border-radius: 9999px;
+  background-color: #f8fafc;
+  border: 1px solid #e7ebf2;
+}
+
+.abt-card-badge-num {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #475569;
+  letter-spacing: 0.08em;
+}
+
+.abt-card-pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  animation: beaconGlow 2s infinite;
+}
+
+.abt-card-heading-block {
+  margin-bottom: 0.65rem;
+}
+
+.abt-card-metric-tag {
+  display: inline-block;
+  padding: 0.22rem 0.62rem;
+  border-radius: 6px;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.55rem;
+  text-transform: uppercase;
+}
+
+.abt-card-title {
+  font-family: var(--font-display, sans-serif);
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: #101828;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+.abt-card-desc {
+  font-size: 0.84rem;
+  color: #64748b;
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.abt-card-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.52rem;
+  padding: 0.95rem 0;
+  border-top: 1px dashed #e7ebf2;
+  border-bottom: 1px dashed #e7ebf2;
+  margin-bottom: 1.15rem;
+}
+
+.abt-card-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.76rem;
+  color: #334155;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.abt-card-check-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.abt-card-bottom-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-family: var(--font-mono, monospace);
+}
+
+.abt-card-telemetry-label {
+  font-size: 0.58rem;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.abt-card-telemetry-val {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+/* Pillar 01: Mint */
+.abt-card-mint:hover {
+  border-color: rgba(0, 255, 198, 0.6);
+  box-shadow: 0 22px 52px -10px rgba(0, 255, 198, 0.2), 0 0 0 1px rgba(0, 255, 198, 0.35);
+}
+.abt-card-mint .abt-card-laser-beam {
+  background: linear-gradient(90deg, transparent, #00ffc6, transparent);
+}
+.abt-card-mint .abt-card-icon-pedestal {
+  background: rgba(0, 255, 198, 0.12);
+  color: #059669;
+  border: 1px solid rgba(0, 255, 198, 0.35);
+}
+.abt-card-mint .abt-card-icon-aura { background-color: #00ffc6; }
+.abt-card-mint .abt-card-pulse-dot { background-color: #00ffc6; box-shadow: 0 0 8px #00ffc6; }
+.abt-card-mint .abt-card-metric-tag {
+  background: rgba(0, 255, 198, 0.14);
+  color: #047857;
+  border: 1px solid rgba(0, 255, 198, 0.3);
+}
+.abt-card-mint .abt-card-check-icon { color: #059669; }
+.abt-card-mint .abt-card-telemetry-val { color: #059669; }
+
+/* Pillar 02: Blue */
+.abt-card-blue:hover {
+  border-color: rgba(0, 108, 255, 0.55);
+  box-shadow: 0 22px 52px -10px rgba(0, 108, 255, 0.2), 0 0 0 1px rgba(0, 108, 255, 0.3);
+}
+.abt-card-blue .abt-card-laser-beam {
+  background: linear-gradient(90deg, transparent, #006cff, transparent);
+}
+.abt-card-blue .abt-card-icon-pedestal {
+  background: rgba(0, 108, 255, 0.09);
+  color: #006cff;
+  border: 1px solid rgba(0, 108, 255, 0.28);
+}
+.abt-card-blue .abt-card-icon-aura { background-color: #006cff; }
+.abt-card-blue .abt-card-pulse-dot { background-color: #006cff; box-shadow: 0 0 8px #006cff; }
+.abt-card-blue .abt-card-metric-tag {
+  background: rgba(0, 108, 255, 0.09);
+  color: #006cff;
+  border: 1px solid rgba(0, 108, 255, 0.22);
+}
+.abt-card-blue .abt-card-check-icon { color: #006cff; }
+.abt-card-blue .abt-card-telemetry-val { color: #006cff; }
+
+/* Pillar 03: Purple */
+.abt-card-purple:hover {
+  border-color: rgba(139, 92, 246, 0.55);
+  box-shadow: 0 22px 52px -10px rgba(139, 92, 246, 0.2), 0 0 0 1px rgba(139, 92, 246, 0.3);
+}
+.abt-card-purple .abt-card-laser-beam {
+  background: linear-gradient(90deg, transparent, #8b5cf6, transparent);
+}
+.abt-card-purple .abt-card-icon-pedestal {
+  background: rgba(139, 92, 246, 0.09);
+  color: #7c3aed;
+  border: 1px solid rgba(139, 92, 246, 0.28);
+}
+.abt-card-purple .abt-card-icon-aura { background-color: #8b5cf6; }
+.abt-card-purple .abt-card-pulse-dot { background-color: #8b5cf6; box-shadow: 0 0 8px #8b5cf6; }
+.abt-card-purple .abt-card-metric-tag {
+  background: rgba(139, 92, 246, 0.09);
+  color: #7c3aed;
+  border: 1px solid rgba(139, 92, 246, 0.22);
+}
+.abt-card-purple .abt-card-check-icon { color: #7c3aed; }
+.abt-card-purple .abt-card-telemetry-val { color: #7c3aed; }
+
+/* Pillar 04: Pink */
+.abt-card-pink:hover {
+  border-color: rgba(255, 110, 199, 0.55);
+  box-shadow: 0 22px 52px -10px rgba(255, 110, 199, 0.2), 0 0 0 1px rgba(255, 110, 199, 0.3);
+}
+.abt-card-pink .abt-card-laser-beam {
+  background: linear-gradient(90deg, transparent, #ff6ec7, transparent);
+}
+.abt-card-pink .abt-card-icon-pedestal {
+  background: rgba(255, 110, 199, 0.1);
+  color: #db2777;
+  border: 1px solid rgba(255, 110, 199, 0.3);
+}
+.abt-card-pink .abt-card-icon-aura { background-color: #ff6ec7; }
+.abt-card-pink .abt-card-pulse-dot { background-color: #ff6ec7; box-shadow: 0 0 8px #ff6ec7; }
+.abt-card-pink .abt-card-metric-tag {
+  background: rgba(255, 110, 199, 0.1);
+  color: #db2777;
+  border: 1px solid rgba(255, 110, 199, 0.24);
+}
+.abt-card-pink .abt-card-check-icon { color: #db2777; }
+.abt-card-pink .abt-card-telemetry-val { color: #db2777; }
+
+/* ===================================================================
+   SECTION 4: EVOLUTIONARY TIMELINE
+   =================================================================== */
+.abt-timeline-section {
+  position: relative;
+  padding: clamp(4.5rem, 7vw, 6.5rem) 0;
+  background-color: #f8fafc;
+  border-top: 1px solid #e7ebf2;
+  border-bottom: 1px solid #e7ebf2;
+}
+
+.abt-timeline-header {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto clamp(3rem, 5vw, 4.5rem);
+}
+
+.abt-timeline-track {
+  position: relative;
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.abt-timeline-center-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(180deg, #00ffc6 0%, #006cff 40%, #8b5cf6 75%, #ff6ec7 100%);
+  transform: translateX(-50%);
+}
+
+.abt-timeline-node {
+  position: relative;
+  width: 50%;
+  padding-bottom: 3rem;
+  box-sizing: border-box;
+}
+
+.abt-timeline-node.is-left {
+  left: 0;
+  padding-right: 3rem;
+  text-align: right;
+}
+
+.abt-timeline-node.is-right {
+  left: 50%;
+  padding-left: 3rem;
+  text-align: left;
+}
+
+.abt-node-orb {
+  position: absolute;
+  top: 14px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 3px solid #006cff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 14px rgba(0, 108, 255, 0.4);
+  z-index: 2;
+}
+
+.abt-timeline-node.is-left .abt-node-orb {
+  right: -11px;
+}
+
+.abt-timeline-node.is-right .abt-node-orb {
+  left: -11px;
+}
+
+.abt-node-inner-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #006cff;
+}
+
+.abt-orb-mint { border-color: #00ffc6; box-shadow: 0 0 14px rgba(0, 255, 198, 0.5); }
+.abt-orb-mint .abt-node-inner-dot { background-color: #00ffc6; }
+
+.abt-orb-blue { border-color: #006cff; box-shadow: 0 0 14px rgba(0, 108, 255, 0.5); }
+.abt-orb-blue .abt-node-inner-dot { background-color: #006cff; }
+
+.abt-orb-purple { border-color: #8b5cf6; box-shadow: 0 0 14px rgba(139, 92, 246, 0.5); }
+.abt-orb-purple .abt-node-inner-dot { background-color: #8b5cf6; }
+
+.abt-orb-pink { border-color: #ff6ec7; box-shadow: 0 0 14px rgba(255, 110, 199, 0.5); }
+.abt-orb-pink .abt-node-inner-dot { background-color: #ff6ec7; }
+
+.abt-milestone-card {
+  background-color: #ffffff;
+  border: 1px solid #e7ebf2;
+  border-radius: 20px;
+  padding: 1.5rem 1.6rem;
+  box-shadow: 0 10px 30px -8px rgba(16, 24, 40, 0.06);
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.abt-milestone-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px -10px rgba(16, 24, 40, 0.12);
+}
+
+.abt-milestone-top {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.abt-timeline-node.is-left .abt-milestone-top {
+  justify-content: flex-end;
+}
+
+.abt-milestone-phase {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #006cff;
+  letter-spacing: 0.08em;
+}
+
+.abt-milestone-year {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.abt-milestone-badge {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.62rem;
+  font-weight: 700;
+  padding: 0.15rem 0.55rem;
+  border-radius: 9999px;
+  background-color: #f1f5f9;
+  color: #334155;
+}
+
+.abt-milestone-title {
+  font-family: var(--font-display, sans-serif);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #101828;
+  margin-bottom: 0.45rem;
+}
+
+.abt-milestone-desc {
+  font-size: 0.84rem;
+  color: #64748b;
+  line-height: 1.55;
+  margin-bottom: 0.85rem;
+}
+
+.abt-milestone-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.abt-timeline-node.is-left .abt-milestone-tags {
+  justify-content: flex-end;
+}
+
+.abt-tag-pill {
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  background-color: #f8fafc;
+  border: 1px solid #e7ebf2;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+/* ===================================================================
+   SECTION 5: LIVING TECHNICAL LABORATORY
+   =================================================================== */
+.abt-tech-section {
+  position: relative;
+  padding: clamp(4.5rem, 7vw, 6.5rem) 0;
+  background-color: #ffffff;
+}
+
+.abt-tech-header {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto clamp(2.5rem, 4.5vw, 3.8rem);
+}
+
+.abt-tech-filter-pills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1.85rem;
+}
+
+.abt-filter-pill {
+  padding: 0.45rem 1.05rem;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  border: 1px solid #e7ebf2;
+  font-family: var(--font-display, sans-serif);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 260ms ease;
+}
+
+.abt-filter-pill:hover {
+  border-color: #006cff;
+  color: #101828;
+}
+
+.abt-filter-pill.is-active {
+  background: linear-gradient(135deg, #101828 0%, #1e293b 100%);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(16, 24, 40, 0.2);
+}
+
+.abt-tech-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.abt-tech-item-card {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #e7ebf2;
+  border-radius: 18px;
+  padding: 1.35rem 1.25rem;
+  box-shadow: 0 6px 20px -4px rgba(16, 24, 40, 0.04);
+  text-align: left;
+  transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+}
+
+.abt-tech-item-card:hover {
+  transform: translateY(-4px);
+  border-color: #006cff;
+  box-shadow: 0 14px 34px -6px rgba(0, 108, 255, 0.15);
+}
+
+.abt-tech-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.65rem;
+}
+
+.abt-tech-level {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: #006cff;
+  background: rgba(0, 108, 255, 0.08);
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.abt-tech-cat {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.62rem;
+  color: #94a3b8;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.abt-tech-name {
+  font-family: var(--font-display, sans-serif);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #101828;
+  margin-bottom: 0.35rem;
+}
+
+.abt-tech-role {
+  font-size: 0.8rem;
+  color: #64748b;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.abt-tech-status-dot {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #00ffc6;
+  opacity: 0.6;
+}
+
+/* ===================================================================
+   SECTION 6: FOUNDING LEADERSHIP
+   =================================================================== */
+.abt-leadership-section {
+  position: relative;
+  padding: clamp(4rem, 6.5vw, 6rem) 0;
+  background-color: #f8fafc;
+  border-top: 1px solid #e7ebf2;
+}
+
+.abt-leader-card {
+  background-color: #ffffff;
+  border: 1px solid #e7ebf2;
+  border-radius: 28px;
+  padding: clamp(2rem, 4vw, 3.5rem);
+  box-shadow: 0 20px 50px -10px rgba(16, 24, 40, 0.08);
+}
+
+.abt-leader-photo-stage {
+  position: relative;
+  display: inline-block;
+}
+
+.abt-leader-photo-frame {
+  position: relative;
+  width: clamp(240px, 26vw, 320px);
+  aspect-ratio: 1 / 1;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 2px solid #ffffff;
+  box-shadow: 0 20px 44px -8px rgba(16, 24, 40, 0.16);
+  z-index: 2;
+}
+
+.abt-leader-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 500ms ease;
+}
+
+.abt-leader-photo-frame:hover .abt-leader-photo {
+  transform: scale(1.05);
+}
+
+.abt-leader-photo-glass {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.abt-leader-photo-glow {
+  position: absolute;
+  inset: -15px;
+  border-radius: 32px;
+  background: radial-gradient(circle, rgba(0, 108, 255, 0.22) 0%, rgba(0, 255, 198, 0.15) 60%, transparent 80%);
+  filter: blur(20px);
+  z-index: 1;
+}
+
+.abt-leader-narrative {
+  text-align: left;
+  padding-left: clamp(0rem, 2vw, 1.5rem);
+}
+
+.abt-leader-name {
+  font-family: var(--font-display, sans-serif);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: #101828;
+  margin-bottom: 0.25rem;
+}
+
+.abt-leader-role {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #006cff;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
+.abt-leader-quote {
+  font-family: var(--font-display, sans-serif);
+  font-size: 1.05rem;
+  font-style: italic;
+  color: #1e293b;
+  line-height: 1.6;
+  border-left: 3px solid #00ffc6;
+  padding-left: 1.15rem;
+  margin: 0 0 1.25rem 0;
+}
+
+.abt-leader-bio {
+  font-size: 0.92rem;
+  color: #64748b;
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+}
+
+.abt-leader-credentials {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.abt-cred-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 9999px;
+  background-color: #f1f5f9;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+/* ===================================================================
+   SECTION 7: EXECUTIVE LAUNCHPAD CTA
+   =================================================================== */
+.abt-cta-section {
+  position: relative;
+  background-color: #ffffff;
+  padding: clamp(4.5rem, 7vw, 6.5rem) 0;
+  border-top: 1px solid #e7ebf2;
+}
+
+.abt-cta-card {
+  position: relative;
+  border-radius: 32px;
+  background: linear-gradient(135deg, #ffffff 0%, #f7f9fc 100%);
+  border: 1px solid #e7ebf2;
+  box-shadow:
+    0 24px 64px -12px rgba(16, 24, 40, 0.08),
+    0 2px 6px rgba(16, 24, 40, 0.02);
+  padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 4vw, 3.5rem);
+  text-align: center;
+  overflow: hidden;
+}
+
+.abt-cta-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.abt-cta-glow-1 {
+  width: 420px;
+  height: 420px;
+  top: -120px;
+  left: 10%;
+  background: radial-gradient(circle, rgba(0, 255, 198, 0.16) 0%, transparent 70%);
+}
+
+.abt-cta-glow-2 {
+  width: 460px;
+  height: 460px;
+  bottom: -140px;
+  right: 10%;
+  background: radial-gradient(circle, rgba(0, 108, 255, 0.14) 0%, transparent 70%);
+}
+
+.abt-cta-body {
+  position: relative;
+  z-index: 1;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.abt-cta-title {
+  font-family: var(--font-display, sans-serif);
+  font-size: clamp(2.1rem, 4.2vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: #101828;
+  margin-bottom: 1.15rem;
+}
+
+.abt-cta-subtitle {
+  font-size: clamp(1rem, 1.35vw, 1.15rem);
+  line-height: 1.62;
+  color: #64748b;
+  margin: 0 auto 2.5rem;
+  max-width: 620px;
+}
+
+.abt-cta-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2.75rem;
+}
+
+.abt-cta-meta-strip {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.65rem 1.4rem;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  border: 1px solid #e7ebf2;
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.03);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.abt-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.abt-meta-dot {
+  opacity: 0.35;
+}
+
+/* ===================================================================
+   RESPONSIVE BREAKPOINTS (5-TIER)
+   =================================================================== */
+@media (max-width: 1200px) {
+  .abt-values-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .abt-tech-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .abt-orbit-badge {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .abt-metrics-ribbon {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .abt-metric-divider {
+    display: none;
+  }
+  .abt-philosoph-row {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  .abt-dna-card {
+    margin-top: 2rem;
+  }
+  .abt-leader-photo-stage {
+    margin-bottom: 2rem;
+  }
+  .abt-leader-narrative {
+    padding-left: 0;
+    text-align: center;
+  }
+  .abt-leader-quote {
+    text-align: left;
+  }
+  .abt-leader-credentials {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .abt-hero-section {
+    padding: 2.5rem 0 3.5rem;
+  }
+  .abt-metrics-ribbon {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+  }
+  .abt-console-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
+  .abt-values-grid {
+    grid-template-columns: 1fr;
+  }
+  .abt-timeline-center-line {
+    left: 20px;
+  }
+  .abt-timeline-node {
+    width: 100%;
+    left: 0 !important;
+    padding-left: 55px !important;
+    padding-right: 0 !important;
+    text-align: left !important;
+  }
+  .abt-timeline-node.is-left .abt-node-orb,
+  .abt-timeline-node.is-right .abt-node-orb {
+    left: 9px !important;
+    right: auto !important;
+  }
+  .abt-timeline-node.is-left .abt-milestone-top,
+  .abt-timeline-node.is-left .abt-milestone-tags {
+    justify-content: flex-start !important;
+  }
+  .abt-tech-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .abt-tab-switcher {
+    flex-direction: column;
+    border-radius: 16px;
+    width: 100%;
+  }
+  .abt-tab-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .abt-cta-meta-strip {
+    flex-direction: column;
+    border-radius: 18px;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  .abt-meta-dot {
+    display: none;
+  }
+  .abt-dna-specs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .abt-tech-grid {
+    grid-template-columns: 1fr;
+  }
+}
