@@ -94,7 +94,7 @@ const CONTACT_FAQS = [
     id: 'faq-2',
     question: 'Can I speak directly with the founders or lead software architects?',
     answer:
-      'Yes. At Ultoxy Technologies you collaborate directly with Co-Founder Mr. Rameshwar Pawar (+91 77768 24564) and CEO Mr. Krishna Thore (+91 70305 99317) from day one.',
+      'Yes. At Ultoxy Technologies you collaborate directly with CEO & Founder Mr. Rameshwar Pawar (+91 77768 24564) and Co-Founder Mr. Krishna Thore (+91 70305 99317) from day one.',
   },
   {
     id: 'faq-3',
@@ -286,8 +286,8 @@ export default function Contact() {
 
                   <div className="cc-body">
                     <span className="cc-label">
-                      {companyInfo.contact.phones[0].person.toUpperCase()} •
-                      CO-FOUNDER
+                      {companyInfo.contact.phones[0].person.toUpperCase()} • CEO
+                      &amp; FOUNDER
                     </span>
                     <a
                       href={`tel:${companyInfo.contact.phones[0].raw}`}
@@ -330,7 +330,7 @@ export default function Contact() {
                   </div>
                 </motion.div>
 
-                {/* Channel 2: CEO & Founder Phone */}
+                {/* Channel 2: Co-Founder Phone */}
                 <motion.div
                   className="creative-contact-card"
                   style={{
@@ -353,8 +353,8 @@ export default function Contact() {
 
                   <div className="cc-body">
                     <span className="cc-label">
-                      {companyInfo.contact.phones[1].person.toUpperCase()} • CEO
-                      &amp; FOUNDER
+                      {companyInfo.contact.phones[1].person.toUpperCase()} •
+                      CO-FOUNDER
                     </span>
                     <a
                       href={`tel:${companyInfo.contact.phones[1].raw}`}

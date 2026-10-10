@@ -12,27 +12,21 @@ import {
   ArrowUpRight,
   ArrowRight,
   Lock,
-  Layers,
   Cpu,
   Zap,
   Users,
   Target,
   Eye,
   Heart,
-  Award,
   TrendingUp,
   Terminal,
-  GitBranch,
-  Laptop,
   Smartphone,
-  Database,
   Server,
   Globe,
   Mail,
   PhoneCall,
   Clock,
-  Play,
-  Check,
+  Crown,
 } from 'lucide-react'
 import SEO from '../components/SEO'
 import { seoConfig, companyInfo } from '../data/companyData'
@@ -878,76 +872,239 @@ export default function About() {
       </section>
 
       {/* ===================================================================
-          SECTION 6: FOUNDING LEADERSHIP & SYSTEMS ARCHITECTS
+          SECTION 6: EXECUTIVE LEADERSHIP & FOUNDING ARCHITECTS
           =================================================================== */}
       <section className="abt-leadership-section" id="leadership">
         <div className="container">
-          <motion.div
-            className="abt-leader-card"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.65, ease: EASE_OUT_EXPO }}
+          <div
+            className="abt-section-header text-center"
+            style={{
+              maxWidth: '820px',
+              margin: '0 auto clamp(2.5rem, 5vw, 3.8rem)',
+            }}
           >
-            <div className="row align-items-center">
-              {/* Leader Photo with Frame */}
-              <div className="col-lg-5 text-center">
-                <div className="abt-leader-photo-stage">
-                  <div className="abt-leader-photo-frame">
-                    <img
-                      src={resolveAsset('team/rameshwar.jpg')}
-                      alt="Rameshwar Pawar - Founder & Systems Architect"
-                      className="abt-leader-photo"
-                      loading="lazy"
-                    />
-                    <div className="abt-leader-photo-glass" />
-                  </div>
-                  <div className="abt-leader-photo-glow" aria-hidden="true" />
-                </div>
-              </div>
+            <div className="abt-eyebrow-pill" style={{ margin: '0 auto 1rem' }}>
+              <Crown size={13} style={{ color: '#006cff' }} />
+              <span>EXECUTIVE LEADERSHIP // FOUNDING ARCHITECTS</span>
+            </div>
+            <h2 className="abt-section-title">
+              The Visionaries Behind{' '}
+              <span className="abt-title-accent">Ultoxy</span> Technologies.
+            </h2>
+            <p className="abt-section-lead" style={{ margin: '0 auto' }}>
+              Deep architectural engineering discipline coupled with operational
+              execution. Our founders collaborate directly with enterprise clients
+              to architect resilient, high-compounding digital engines.
+            </p>
+          </div>
 
-              {/* Leader Narrative */}
-              <div className="col-lg-7">
-                <div className="abt-leader-narrative">
-                  <div className="abt-eyebrow-pill" style={{ marginBottom: '1rem' }}>
-                    <Award size={13} style={{ color: '#006cff' }} />
-                    <span>LEADERSHIP &amp; FOUNDING ARCHITECT</span>
-                  </div>
-                  <h3 className="abt-leader-name">Rameshwar Pawar</h3>
-                  <span className="abt-leader-role">
-                    Founder &amp; Principal Systems Architect // Ultoxy Technologies
-                  </span>
+          <div className="row g-4 abt-leaders-grid">
+            {/* Leader 1: Rameshwar Pawar (CEO & FOUNDER) */}
+            <div className="col-lg-6">
+              <motion.div
+                className="abt-leader-card ceo-leader-card"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.65, ease: EASE_OUT_EXPO }}
+              >
+                <div
+                  className="abt-leader-card-glow leader-glow-blue"
+                  aria-hidden="true"
+                />
+                <div className="abt-leader-card-inner">
+                  {/* Profile Header */}
+                  <div className="abt-leader-header">
+                    <div className="abt-leader-photo-stage">
+                      <div className="abt-leader-photo-frame">
+                        <img
+                          src={resolveAsset('team/rameshwar.jpg')}
+                          alt="Rameshwar Pawar - CEO & Founder"
+                          className="abt-leader-photo"
+                          loading="lazy"
+                        />
+                        <div className="abt-leader-photo-glass" />
+                      </div>
+                      <div className="abt-leader-photo-glow" aria-hidden="true" />
+                      <div
+                        className="abt-leader-verified-badge"
+                        title="Verified Founder"
+                      >
+                        <CheckCircle2 size={13} />
+                      </div>
+                    </div>
 
-                  <blockquote className="abt-leader-quote">
-                    &ldquo;Software engineering is not merely about typing syntax—it is about
-                    transforming ambitious human vision into resilient, scalable digital engines
-                    that create compounding enterprise value.&rdquo;
+                    <div className="abt-leader-meta">
+                      <div className="abt-leader-role-badge ceo-badge">
+                        <Crown size={12} className="abt-badge-icon" />
+                        <span>CEO &amp; FOUNDER</span>
+                      </div>
+                      <h3 className="abt-leader-name">Rameshwar Pawar</h3>
+                      <span className="abt-leader-role">
+                        Chief Executive Officer &amp; Principal Systems Architect
+                      </span>
+                      <div className="abt-leader-channel-links">
+                        <a
+                          href="tel:+917776824564"
+                          className="abt-leader-action-btn"
+                          title="Call Mr. Rameshwar Pawar"
+                        >
+                          <PhoneCall size={12} />
+                          <span>+91 77768 24564</span>
+                        </a>
+                        <a
+                          href="mailto:info@ultoxy.com"
+                          className="abt-leader-icon-btn"
+                          title="Email Rameshwar Pawar"
+                        >
+                          <Mail size={13} />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Leader Quote */}
+                  <blockquote className="abt-leader-quote quote-blue">
+                    &ldquo;Software engineering is not merely about typing
+                    syntax—it is about transforming ambitious human vision into
+                    resilient, scalable digital engines that create compounding
+                    enterprise value.&rdquo;
                   </blockquote>
 
+                  {/* Bio Narrative */}
                   <p className="abt-leader-bio">
-                    Leading technology and product architecture at Ultoxy, Rameshwar oversees
-                    the engineering of custom ERP frameworks, high-throughput cloud portals, and
-                    mission-critical mobile applications across logistics, education, and commerce.
+                    Leading executive vision and core product architecture at
+                    Ultoxy, Rameshwar oversees the engineering of custom
+                    enterprise ERP frameworks, high-throughput cloud portals,
+                    and mission-critical mobile applications across logistics,
+                    education, and commerce.
                   </p>
 
+                  {/* Credentials / Core Domains */}
                   <div className="abt-leader-credentials">
                     <div className="abt-cred-chip">
-                      <Code2 size={14} style={{ color: '#00ffc6' }} />
+                      <Code2 size={13} style={{ color: '#00ffc6' }} />
                       <span>Full-Stack Cloud Architect</span>
                     </div>
                     <div className="abt-cred-chip">
-                      <Server size={14} style={{ color: '#006cff' }} />
-                      <span>Django &amp; React Specialist</span>
+                      <Server size={13} style={{ color: '#006cff' }} />
+                      <span>Django &amp; React Engineering</span>
                     </div>
                     <div className="abt-cred-chip">
-                      <Smartphone size={14} style={{ color: '#8b5cf6' }} />
-                      <span>Flutter Native Engineer</span>
+                      <ShieldCheck size={13} style={{ color: '#8b5cf6' }} />
+                      <span>OWASP Security Hardening</span>
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
-          </motion.div>
+
+            {/* Leader 2: Krishna Thore (CO-FOUNDER) */}
+            <div className="col-lg-6">
+              <motion.div
+                className="abt-leader-card cofounder-leader-card"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{
+                  duration: 0.65,
+                  delay: 0.1,
+                  ease: EASE_OUT_EXPO,
+                }}
+              >
+                <div
+                  className="abt-leader-card-glow leader-glow-mint"
+                  aria-hidden="true"
+                />
+                <div className="abt-leader-card-inner">
+                  {/* Profile Header */}
+                  <div className="abt-leader-header">
+                    <div className="abt-leader-photo-stage">
+                      <div className="abt-leader-photo-frame">
+                        <img
+                          src={resolveAsset('team/krishna.jpg')}
+                          alt="Krishna Thore - Co-Founder"
+                          className="abt-leader-photo"
+                          loading="lazy"
+                        />
+                        <div className="abt-leader-photo-glass" />
+                      </div>
+                      <div
+                        className="abt-leader-photo-glow mint-glow"
+                        aria-hidden="true"
+                      />
+                      <div
+                        className="abt-leader-verified-badge"
+                        title="Verified Founder"
+                      >
+                        <CheckCircle2 size={13} />
+                      </div>
+                    </div>
+
+                    <div className="abt-leader-meta">
+                      <div className="abt-leader-role-badge cofounder-badge">
+                        <Sparkles size={12} className="abt-badge-icon" />
+                        <span>CO-FOUNDER</span>
+                      </div>
+                      <h3 className="abt-leader-name">Krishna Thore</h3>
+                      <span className="abt-leader-role">
+                        Co-Founder &amp; Head of Operations &amp; Growth
+                      </span>
+                      <div className="abt-leader-channel-links">
+                        <a
+                          href="tel:+917030599317"
+                          className="abt-leader-action-btn"
+                          title="Call Mr. Krishna Thore"
+                        >
+                          <PhoneCall size={12} />
+                          <span>+91 70305 99317</span>
+                        </a>
+                        <a
+                          href="mailto:info@ultoxy.com"
+                          className="abt-leader-icon-btn"
+                          title="Email Krishna Thore"
+                        >
+                          <Mail size={13} />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Leader Quote */}
+                  <blockquote className="abt-leader-quote quote-mint">
+                    &ldquo;Engineering brilliance reaches its peak when
+                    seamlessly aligned with operational excellence, customer
+                    empathy, and flawless execution at scale.&rdquo;
+                  </blockquote>
+
+                  {/* Bio Narrative */}
+                  <p className="abt-leader-bio">
+                    Driving operational excellence, strategic partnerships, and
+                    enterprise business expansion at Ultoxy, Krishna
+                    orchestrates seamless client delivery, executive
+                    relationships, and agile technical deployment lifecycles
+                    across diverse industry verticals.
+                  </p>
+
+                  {/* Credentials / Core Domains */}
+                  <div className="abt-leader-credentials">
+                    <div className="abt-cred-chip">
+                      <TrendingUp size={13} style={{ color: '#006cff' }} />
+                      <span>Operations &amp; Strategy</span>
+                    </div>
+                    <div className="abt-cred-chip">
+                      <Users size={13} style={{ color: '#00ffc6' }} />
+                      <span>Enterprise Partnerships</span>
+                    </div>
+                    <div className="abt-cred-chip">
+                      <Zap size={13} style={{ color: '#ff6ec7' }} />
+                      <span>Agile Execution &amp; Scale</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
         </div>
       </section>
 
